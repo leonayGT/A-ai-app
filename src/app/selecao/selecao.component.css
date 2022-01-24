@@ -1,0 +1,13 @@
+.titulo {
+  background-color: #eee;
+  padding: 8px 16px;
+}
+strong {
+  font-size: larger;
+}
+.opcao {
+  padding: 8px 16px;
+}
+.corpo {
+  padding: 8px 0;
+}

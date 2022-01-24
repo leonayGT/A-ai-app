@@ -1,0 +1,17 @@
+<div class="titulo">
+  <strong>{{ titulo }}</strong>
+  <div *ngIf="escolhaAte > 1">
+    Escolha até {{ escolhaAte }} ({{ opcoesEscolhidas.length }} escolhidas)
+  </div>
+</div>
+<div class="corpo">
+  <div class="opcao" *ngFor="let opcao of opcoes">
+    <input
+      [type]="escolhaAte > 1 ? 'checkbox' : 'radio'"
+      [checked]="opcoesEscolhidas.indexOf(opcao) !== -1"
+      [disabled]="estaDesabilitada(opcao)"
+      (change)="marcaOuDesmarcaOpcao(opcao)"
+    />
+    {{ opcao }}
+  </div>
+</div>
